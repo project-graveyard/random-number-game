@@ -16,12 +16,13 @@ games_played = 1
 # add game levels
 function levels()
     println("Choose a level")
-    println("-"^20)
+    println("-"^25)
     println("1. Easy [1 - 10]")
     println("2. Medium [1 - 25]")
     println("3. Hard [1 - 50]")
     println("4. Expert [1 - 100]")
-    println("-"^20)
+    println("5. Legendary [1 - 1000]")
+    println("-"^25)
 
     print("option: ")
     _level = parse(Int, readline())
@@ -38,6 +39,9 @@ function levels()
     elseif _level == 4
         number = rand(1:100)
         msg = "Guess a number between 1 and 100: "
+    elseif _level == 5
+	number = rand(1:1000)
+	msg = "Guess a number between 1 and 1000: "
     end
     
     return number, msg
